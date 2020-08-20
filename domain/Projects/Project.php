@@ -1,6 +1,6 @@
 <?php
 
-namespace Domains\Projects;
+namespace Domain\Projects;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,4 +10,9 @@ class Project extends Model
         'title',
         'description'
     ];
+
+    public function tasks()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }

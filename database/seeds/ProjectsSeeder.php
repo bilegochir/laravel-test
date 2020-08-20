@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use Domains\Projects\Project;
+use Domain\Projects\Project;
 
 class ProjectsSeeder extends Seeder
 {

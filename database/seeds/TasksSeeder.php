@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use Domains\Tasks\Task;
+use Domain\Tasks\Task;
 
 class TasksSeeder extends Seeder
 {

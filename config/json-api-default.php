@@ -66,8 +66,8 @@ return [
     | `'posts' => App\Post::class`
     */
     'resources' => [
-        'projects' => \Domains\Projects\Project::class,
-        'tasks' => \Domains\Tasks\Task::class,
+        'projects' => \Domain\Projects\Project::class,
+        'tasks' => \Domain\Tasks\Task::class,
     ],
 
     /*

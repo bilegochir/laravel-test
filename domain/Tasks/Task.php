@@ -1,6 +1,6 @@
 <?php
 
-namespace Domains\Tasks;
+namespace Domain\Tasks;
 
 use Illuminate\Database\Eloquent\Model;
 
