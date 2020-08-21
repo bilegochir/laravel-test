@@ -13,6 +13,6 @@ class Project extends Model
 
     public function tasks()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('Domain\Tasks\Task');
     }
 }

@@ -6,27 +6,13 @@ use Neomerx\JsonApi\Schema\SchemaProvider;
 
 class Schema extends SchemaProvider
 {
-
-    /**
-     * @var string
-     */
     protected $resourceType = 'projects';
 
-    /**
-     * @param \App\Project $resource
-     *      the domain record being serialized.
-     * @return string
-     */
     public function getId($resource)
     {
         return (string) $resource->getRouteKey();
     }
 
-    /**
-     * @param \App\Project $resource
-     *      the domain record being serialized.
-     * @return array
-     */
     public function getAttributes($resource)
     {
         return [
@@ -34,6 +20,16 @@ class Schema extends SchemaProvider
             'description' => $resource->description,
             'created-at' => $resource->created_at->toAtomString(),
             'updated-at' => $resource->updated_at->toAtomString(),
+        ];
+    }
+
+    public function getRelationships($project, $isPrimary, array $includeRelationships)
+    {
+        return [
+            'tasks' => [
+                self::SHOW_SELF => true,
+                self::SHOW_RELATED => true,
+            ],
         ];
     }
 }

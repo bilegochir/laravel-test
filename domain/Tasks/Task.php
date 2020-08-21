@@ -10,4 +10,9 @@ class Task extends Model
         'title',
         'description'
     ];
+
+    public function project()
+    {
+        return $this->belongsTo('Domain\Projects\Project');
+    }
 }

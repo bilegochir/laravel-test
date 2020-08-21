@@ -17,6 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->foreignId('project_id')->constrained();
             $table->timestamps();
         });
     }
